@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_workmate/screens/login_screen.dart';
 import 'package:personal_workmate/screens/splash_screen.dart';
 
 void main() {
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(),
       initialRoute: SplashScreen.routeName,
-      routes: {SplashScreen.routeName: (context) => SplashScreen()},
+      routes: {
+        SplashScreen.routeName: (context) => SplashScreen(),
+        LoginScreen.routeName: (context) => LoginScreen()
+      },
     );
   }
 }
