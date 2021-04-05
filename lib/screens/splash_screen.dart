@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:personal_workmate/screens/login_screen.dart';
+import 'package:personal_workmate/components/hero_logo.dart';
+import 'package:personal_workmate/screens/login_screen/login_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   static String routeName = 'splash';
@@ -15,14 +16,7 @@ class SplashScreen extends StatelessWidget {
         color: Colors.white,
         child: Expanded(
           child: Center(
-            child: Hero(
-              tag: 'logo',
-              child: Icon(
-                Icons.sports,
-                size: 200,
-                color: Theme.of(context).primaryColor,
-              ),
-            ),
+            child: HeroLogo(size: 150),
           ),
         ),
       ),
