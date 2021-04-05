@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:personal_workmate/components/form_box.dart';
-import 'dart:math';
 import 'package:personal_workmate/components/hero_logo.dart';
 import 'package:personal_workmate/screens/login_screen/login_form.dart';
 
@@ -28,9 +27,24 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         FormBox(),
         Positioned(
+          width: MediaQuery.of(context).size.width * 0.7,
           left: MediaQuery.of(context).size.width * 0.05,
           top: MediaQuery.of(context).size.height * 0.275,
-          child: LoginForm(),
+          child: Form(
+            child: Stack(
+              children: [
+                LoginForm(),
+                Positioned(
+                  bottom: 90,
+                  right: 0,
+                  child: ElevatedButton(
+                    child: Text('LOGIN'),
+                    onPressed: () {},
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ]),
     );
