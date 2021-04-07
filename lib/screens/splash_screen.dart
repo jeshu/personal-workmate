@@ -13,7 +13,9 @@ class SplashScreen extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-        color: Colors.white,
+        decoration: BoxDecoration(
+            gradient:
+                LinearGradient(colors: [Colors.orange, Colors.orangeAccent])),
         child: Expanded(
           child: Center(
             child: HeroLogo(size: 150),

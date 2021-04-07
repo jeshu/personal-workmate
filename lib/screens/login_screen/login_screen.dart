@@ -38,7 +38,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   bottom: 90,
                   right: 0,
                   child: ElevatedButton(
-                    child: Text('LOGIN'),
+                    child: Text(
+                      'login',
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                        elevation: 0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50)),
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .headline5
+                            .copyWith(wordSpacing: 1.5, color: Colors.white)),
                     onPressed: () {},
                   ),
                 )
