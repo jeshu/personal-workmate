@@ -45,13 +45,22 @@ class _LoginFormState extends State<LoginForm> {
             height: 30,
           ),
           Card(
+            elevation: 0,
             child: Column(
               children: [
                 TextFormField(
-                  keyboardType: TextInputType.text,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    hintText: 'Email',
+                    icon: Icon(Icons.email_outlined),
+                  ),
                 ),
+                SizedBox(height: 10),
                 TextFormField(
-                  keyboardType: TextInputType.text,
+                  obscureText: true,
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                      hintText: 'password', icon: Icon(Icons.lock_outline)),
                 )
               ],
             ),
