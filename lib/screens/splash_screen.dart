@@ -18,7 +18,9 @@ class SplashScreen extends StatelessWidget {
                 LinearGradient(colors: [Colors.orange, Colors.orangeAccent])),
         child: Expanded(
           child: Center(
-            child: HeroLogo(size: 150),
+            child: HeroLogo(
+              size: 300,
+            ),
           ),
         ),
       ),

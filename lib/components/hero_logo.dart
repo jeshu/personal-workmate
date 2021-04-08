@@ -8,10 +8,16 @@ class HeroLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Hero(
       tag: 'logo',
-      child: Icon(
-        Icons.sports,
-        size: size,
-        color: Theme.of(context).primaryColor,
+      child: CircleAvatar(
+        foregroundImage: AssetImage(
+          'assets/yoga-pose.png',
+        ),
+        backgroundColor: Colors.white,
+        minRadius: size / 2,
+        maxRadius: size / 2,
+        child: Padding(
+          padding: EdgeInsets.all(10),
+        ),
       ),
     );
   }
