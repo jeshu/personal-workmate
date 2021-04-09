@@ -6,17 +6,20 @@ class HeroLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'logo',
-      child: CircleAvatar(
-        foregroundImage: AssetImage(
-          'assets/yoga-pose.png',
-        ),
-        backgroundColor: Colors.white,
-        minRadius: size / 2,
-        maxRadius: size / 2,
-        child: Padding(
-          padding: EdgeInsets.all(10),
+    return SizedBox(
+      width: size,
+      height: size,
+      child: Hero(
+        tag: 'logo',
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: () {},
+            child: Image.asset(
+              'assets/yoga-pose.png',
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
       ),
     );
