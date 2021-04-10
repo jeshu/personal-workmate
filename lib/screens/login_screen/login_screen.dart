@@ -17,15 +17,19 @@ class _LoginScreenState extends State<LoginScreen> {
       color: Colors.orange,
       child: Stack(children: <Widget>[
         Positioned(
-          right: MediaQuery.of(context).size.width * 0.05,
-          top: MediaQuery.of(context).size.height * 0.15,
+          right: MediaQuery.of(context).size.width * 0.1,
+          top: MediaQuery.of(context).size.height * 0.1,
           child: Container(
             child: HeroLogo(
-              size: 150,
+              size: 100,
             ),
           ),
         ),
-        FormBox(),
+        Positioned(
+          left: MediaQuery.of(context).size.width * -0.4,
+          top: MediaQuery.of(context).size.height * 0.25,
+          child: FormBox(),
+        ),
         Positioned(
           width: MediaQuery.of(context).size.width * 0.7,
           left: MediaQuery.of(context).size.width * 0.05,

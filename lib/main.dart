@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData().copyWith(
         primaryColor: Color(0xFF604BBA),
       ),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: LoginScreen.routeName,
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         LoginScreen.routeName: (context) => LoginScreen()
