@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData().copyWith(
-        primaryColor: Color(0xFF604BBA),
+        primaryColor: Color(0xFF0F3057),
       ),
-      initialRoute: LoginScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         LoginScreen.routeName: (context) => LoginScreen()

@@ -44,7 +44,9 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange,
+      decoration: BoxDecoration(
+          gradient:
+              LinearGradient(colors: [Color(0XFF00587A), Color(0XFF0F3057)])),
       child: Stack(children: <Widget>[
         Positioned(
           right: MediaQuery.of(context).size.width * 0.1,
@@ -83,6 +85,7 @@ class _LoginScreenState extends State<LoginScreen>
                         padding:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                         elevation: 0,
+                        primary: Theme.of(context).primaryColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                         textStyle: Theme.of(context)

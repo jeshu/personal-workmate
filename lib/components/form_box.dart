@@ -23,7 +23,7 @@ class FormBox extends StatelessWidget {
           height: size,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0XFFE7E7DE),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black,

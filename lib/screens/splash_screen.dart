@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
       child: Container(
         decoration: BoxDecoration(
             gradient:
-                LinearGradient(colors: [Colors.orange, Colors.orangeAccent])),
+                LinearGradient(colors: [Color(0XFF00587A), Color(0XFF0F3057)])),
         child: Center(
           child: HeroLogo(
             size: animation.value,
