@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_workmate/screens/login_screen/login_screen.dart';
+import 'package:personal_workmate/screens/logs_screen/logs_screen.dart';
 import 'package:personal_workmate/screens/splash_screen.dart';
 
 void main() {
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData().copyWith(
         primaryColor: Color(0xFF0F3057),
       ),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: LogsScreen.routeName,
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
-        LoginScreen.routeName: (context) => LoginScreen()
+        LogsScreen.routeName: (context) => LogsScreen(),
+        LoginScreen.routeName: (context) => LoginScreen(),
       },
     );
   }
