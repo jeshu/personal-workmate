@@ -27,10 +27,16 @@ class LogsScreen extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-            padding: EdgeInsets.all(10),
+            margin: EdgeInsets.only(
+              top: 30,
+              bottom: 10,
+              left: 20,
+              right: 20,
+            ),
+            padding: EdgeInsets.symmetric(vertical: 32, horizontal: 16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(
                 (30),
@@ -43,7 +49,77 @@ class LogsScreen extends StatelessWidget {
               lastDay: today,
               weekendDays: [1, 2, 3, 4, 5],
               startingDayOfWeek: StartingDayOfWeek.monday,
+              headerVisible: false,
               calendarFormat: CalendarFormat.twoWeeks,
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(
+                (4),
+              ),
+              color: Theme.of(context).primaryColor,
+            ),
+            height: 8,
+            width: 80,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'Recent activity',
+            style: Theme.of(context).textTheme.headline6.copyWith(
+                  color: Color(0XFFCCCCCC),
+                ),
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          Container(
+            child: Expanded(
+              child: LogsCard(index: 1),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class LogsCard extends StatelessWidget {
+  const LogsCard({
+    Key key,
+    this.index,
+  });
+
+  final int index;
+  @override
+  Widget build(BuildContext context) {
+    var edgeInsets = EdgeInsets.only(
+      top: 30,
+      left: 0,
+      right: 0,
+      bottom: 0,
+    );
+    return Container(
+      margin: index % 2 != 0
+          ? edgeInsets
+          : EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Days active',
+            style: Theme.of(context).textTheme.headline5,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Expanded(
+            child: Card(
+              child: Center(
+                child: Text('5'),
+              ),
             ),
           )
         ],
