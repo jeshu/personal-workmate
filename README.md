@@ -4,6 +4,8 @@ personal-workmate | Repo for personal assistant
 
 ## Features list
 
+Feature list
+
 1. Login
 2. Home page
 3. Logs
